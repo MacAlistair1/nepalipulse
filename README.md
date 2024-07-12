@@ -17,31 +17,15 @@ Nepali Pulse is a mobile-friendly web application designed to provide users with
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/nepali-pulse.git
+    git clone https://github.com/MacAlistair1/nepalipulse.git
     ```
 2. Navigate to the project directory:
     ```bash
-    cd nepali-pulse
+    cd nepalipulse
     ```
 3. Open `index.html` in your preferred web browser.
 
 ## File Structure
-
-nepali-pulse/
-├── assets/
-│ ├── bank.png
-│ ├── currency.png
-│ ├── date.png
-│ ├── hashtags.png
-│ ├── logo_white.png
-│ ├── noc.png
-│ ├── share.png
-│ ├── tola.png
-│ ├── top.png
-│ └── mobile_frame.png
-├── index.html
-├── styles.css
-└── README.md
 
 - **assets/**: Contains all the image assets used in the project.
 - **index.html**: The main HTML file for the application.
