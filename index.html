@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepali Pulse</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div class="app-header">
+      <div class="app-title">
+        <img
+          src="./assets/logo_white.png"
+          alt="Nepali Pulse Logo"
+          class="app-logo"
+        />
+        <h1>Nepali Pulse</h1>
+      </div>
+      <div class="app-time">4:27</div>
+    </div>
+    <div class="container">
+      <div class="card">
+        <div class="section">
+          <img
+            src="./assets/noc.png"
+            alt="Nepal Oil Corporation"
+            class="section-img"
+          />
+          <div class="section-content">
+            <h2>Nepal Oil Corporation</h2>
+            <p>Effective From: <span id="oil-effective-date">N\A</span></p>
+            <div class="price-grid">
+              <div class="price-item">
+                <h3>Petrol</h3>
+                <p id="petrol">Rs. N\A</p>
+              </div>
+              <div class="price-item">
+                <h3>Diesel</h3>
+                <p id="diesel">Rs. N\A</p>
+              </div>
+              <div class="price-item">
+                <h3>Kerosene</h3>
+                <p id="kerosene">Rs. N\A</p>
+              </div>
+              <div class="price-item">
+                <h3>LPG Gas</h3>
+                <p id="lpg">Rs. N\A</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <img
+            src="./assets/share.png"
+            alt="Share Market"
+            class="section-img"
+          />
+          <div class="section-content">
+            <h2>Share Market</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <img
+            src="./assets/top.png"
+            alt="Top Music Video"
+            class="section-img"
+          />
+          <div class="section-content">
+            <h2>Top Music Video</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <img src="./assets/tola.png" alt="Gold" class="section-img" />
+          <div class="section-content">
+            <h2>Live Price of Gold per Tola in NRP</h2>
+            <div class="price-item">
+              <h3>Gold</h3>
+              <p id="gold">Rs. N\A</p>
+              <p id="gold-effective-date">Last Updated: N\A</p>
+            </div>
+            <div class="price-item">
+              <h3>Silver</h3>
+              <p id="silver">Rs. N\A</p>
+              <p id="silver-effective-date">Last Updated: N\A</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <img
+            src="./assets/currency.png"
+            alt="Currency Rate"
+            class="section-img"
+          />
+          <div class="section-content">
+            <h2>Currency Rate</h2>
+            <p>Last Updated: July 11, 2024</p>
+            <div class="currency-converter">
+              <select id="currency">
+                <option value="INR">Indian Rupee (INR)</option>
+              </select>
+              <div class="exchange-rate">
+                <p>Buy Rate: Rs. 1.6</p>
+                <p>Sell Rate: Rs. 1.6</p>
+              </div>
+              <button>Amount in INR</button>
+              <button>Amount in NRP</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <img
+            src="./assets/bank.png"
+            alt="Bank Interest & FD Rate"
+            class="section-img"
+          />
+          <div class="section-content">
+            <h2>Bank Interest & FD Rate</h2>
+            <p>Last Checked: July 11, 2024</p>
+            <table id="bank">
+              <thead>
+                <tr>
+                  <th>Bank</th>
+                  <th>Saving Rate</th>
+                  <th>FD Rate</th>
+                </tr>
+              </thead>
+
+              <tbody id="bank-rate-list"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <img
+            src="./assets/hashtags.png"
+            alt="Social Hashtags"
+            class="section-img"
+          />
+          <div class="section-content">
+            <h2>Social Hashtags</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <img src="./assets/date.png" alt="Date Convert" class="section-img" />
+          <div class="section-content">
+            <h2>Date Convert</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4caf50;
+  padding: 10px 20px;
+  color: white;
+  width: 100%;
+  max-width: 414px;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+}
+
+.app-logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h2 {
+  color: #4caf50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-img {
+  width: 30%;
+  max-width: 100px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.section-content {
+  width: 100%;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.price-item {
+  padding: 10px;
+  background: #f9f9f9;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.currency-converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.currency-converter select,
+.currency-converter button {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
