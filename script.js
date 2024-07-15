@@ -38,12 +38,12 @@ fetch(`${baseUrl}/bank_rate.json`).then((response) => {
   rawData.then((data) => {
     let htmlData = "";
     data.forEach((item, index) => {
-      if (index < 10) {
+      if (index < 7) {
         htmlData += `<tr>
-            <td>${item.bank}</td>
-            <td>${item.saving}</td>
-            <td>${item.fixed}</td>
-            </tr>`;
+      <td>${item.bank}</td>
+      <td>${item.saving}</td>
+      <td>${item.fixed}</td>
+      </tr>`;
       }
     });
     document.getElementById("bank-rate-list").innerHTML = htmlData;
