@@ -37,6 +37,11 @@ body {
   margin-right: 10px;
 }
 
+.opt-img{
+  width: 80px;
+  cursor: pointer;
+}
+
 .container {
   width: 100%;
   max-width: 400px;
