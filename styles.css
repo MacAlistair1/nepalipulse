@@ -56,6 +56,10 @@ body {
   align-items: center;
 }
 
+.card:hover{
+  background: rgb(234, 231, 231);
+}
+
 .card h2 {
   color: #4caf50;
   margin-bottom: 20px;
