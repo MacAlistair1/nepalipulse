@@ -38,11 +38,11 @@ body {
   margin-right: 10px;
 }
 
-.app-option-menu{
+.app-option-menu {
   margin-right: -10px;
 }
 
-.opt-img{
+.opt-img {
   width: 80px;
   cursor: pointer;
 }
@@ -67,7 +67,7 @@ body {
   cursor: pointer;
 }
 
-.card:hover{
+.card:hover {
   background: rgb(234, 231, 231);
 }
 
@@ -151,4 +151,79 @@ td {
 #download {
   font-size: medium;
   font-weight: lighter;
+}
+
+/* pages */
+
+.music-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.music-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.music-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.music-info h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.music-info p {
+  margin: 5px 0;
+  color: gray;
+}
+
+.music-info button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calculate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculate label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.calculate select {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.inputs input {
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.convert-icon {
+  width: 6%;
+  height: auto;
+  cursor: pointer;
 }
