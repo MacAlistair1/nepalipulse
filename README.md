@@ -39,6 +39,7 @@ To use the application, simply open the `index.html` file in your web browser. T
 ## Contributing
 
 Contributions are welcome! If you have suggestions for improvements or new features, please submit an issue or create a pull request.
+See the [CONTRIBUTING](CONTRIBUTING.md) file for more details.
 
 ## License
 
