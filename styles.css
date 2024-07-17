@@ -53,6 +53,12 @@ body {
   margin-top: 20px;
   overflow-y: auto;
   flex-grow: 1;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
