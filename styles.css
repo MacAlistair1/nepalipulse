@@ -109,13 +109,11 @@ body {
 }
 
 .currency-converter {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.currency-converter select,
-.currency-converter button {
+.currency-converter select {
   margin: 10px 0;
   padding: 10px;
   border-radius: 4px;

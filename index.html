@@ -67,19 +67,19 @@
             <div class="price-grid">
               <div class="price-item">
                 <h3>Petrol</h3>
-                <p id="petrol">Rs. N\A</p>
+                <p id="petrol" onclick="speak(this)">Rs. N\A</p>
               </div>
               <div class="price-item">
                 <h3>Diesel</h3>
-                <p id="diesel">Rs. N\A</p>
+                <p id="diesel" onclick="speak(this)">Rs. N\A</p>
               </div>
               <div class="price-item">
                 <h3>Kerosene</h3>
-                <p id="kerosene">Rs. N\A</p>
+                <p id="kerosene" onclick="speak(this)">Rs. N\A</p>
               </div>
               <div class="price-item">
                 <h3>LPG Gas</h3>
-                <p id="lpg">Rs. N\A</p>
+                <p id="lpg" onclick="speak(this)">Rs. N\A</p>
               </div>
             </div>
           </div>
@@ -116,16 +116,17 @@
         <div class="section">
           <img src="./assets/tola.png" alt="Gold" class="section-img" />
           <div class="section-content">
-            <h2>Live Price of Gold per Tola in NRP</h2>
-            <div class="price-item">
-              <h3>Gold</h3>
-              <p id="gold">Rs. N\A</p>
-              <p id="gold-effective-date">Last Updated: N\A</p>
-            </div>
-            <div class="price-item">
-              <h3>Silver</h3>
-              <p id="silver">Rs. N\A</p>
-              <p id="silver-effective-date">Last Updated: N\A</p>
+            <h2>Per Tola Price in NRP</h2>
+            <p><span id="gold-effective-date">N\A</span></p>
+            <div class="price-grid">
+              <div class="price-item">
+                <p>Gold</p>
+                <h3 id="gold" onclick="speak(this)">Rs. N\A</h3>
+              </div>
+              <div class="price-item">
+                <p>Silver</p>
+                <h3 id="silver" onclick="speak(this)">Rs. N\A</h3>
+              </div>
             </div>
           </div>
         </div>
@@ -142,15 +143,23 @@
             <h2>Currency Rate</h2>
             <p>Last Updated: July 11, 2024</p>
             <div class="currency-converter">
-              <select id="currency">
-                <option value="INR">Indian Rupee (INR)</option>
-              </select>
+              <select
+                id="currency"
+                onchange="changeCurrencySelector(this)"
+              ></select>
               <div class="exchange-rate">
-                <p>Buy Rate: Rs. 1.6</p>
-                <p>Sell Rate: Rs. 1.6</p>
+                <div class="price-grid">
+                  <div class="price-item">
+                    <p>Buying Rate</p>
+                    <h3 onclick="speak(this)">Rs.<span id="buying-rate">N\A</span></h3>
+                  </div>
+
+                  <div class="price-item">
+                    <p>Selling Rate</p>
+                    <h3 onclick="speak(this)">Rs.<span id="selling-rate">N\A</span></h3>
+                  </div>
+                </div>
               </div>
-              <button>Amount in INR</button>
-              <button>Amount in NRP</button>
             </div>
           </div>
         </div>

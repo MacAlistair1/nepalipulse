@@ -1,6 +1,8 @@
 const baseUrl =
   "https://raw.githubusercontent.com/MacAlistair1/scrap-data/main";
 
+let currencyList = [];
+
 fetch(`${baseUrl}/oil.json`).then((response) => {
   const rawData = response.json();
   rawData.then((data) => {
@@ -27,8 +29,6 @@ fetch(`${baseUrl}/gold.json`).then((response) => {
 fetch(`${baseUrl}/silver.json`).then((response) => {
   const rawData = response.json();
   rawData.then((data) => {
-    document.getElementById("silver-effective-date").innerText =
-      "Last Updated: " + data.time;
     document.getElementById("silver").innerText = "Rs. " + data.perTolaPrice;
   });
 });
@@ -49,3 +49,42 @@ fetch(`${baseUrl}/bank_rate.json`).then((response) => {
     document.getElementById("bank-rate-list").innerHTML = htmlData;
   });
 });
+
+fetch(`${baseUrl}/currency.json`).then((response) => {
+  const rawData = response.json();
+  rawData.then((data) => {
+    currencyList = data;
+
+    let htmlData = "";
+
+    data.forEach((item, index) => {
+      if (index == 0) {
+        htmlData += `
+      <option value='${item.code}' selected>${item.name} (${item.code})</option>`;
+        document.getElementById("buying-rate").innerText = item.buy;
+        document.getElementById("selling-rate").innerText = item.sell;
+      } else {
+        htmlData += `
+        <option value='${item.code}'>${item.name} (${item.code})</option>`;
+      }
+    });
+    document.getElementById("currency").innerHTML = htmlData;
+  });
+});
+
+const changeCurrencySelector = (item) => {
+  const currency = currencyList.find((cur) => {
+    return cur.code == item.value;
+  });
+
+  document.getElementById("buying-rate").innerText = currency.buy;
+  document.getElementById("selling-rate").innerText = currency.sell;
+};
+
+const speak = (ele) => {
+  const utterance = new SpeechSynthesisUtterance(ele.innerText);
+  utterance.lang = "hi-IN";
+  const voices = speechSynthesis.getVoices();
+  utterance.voice = voices[0];
+  speechSynthesis.speak(utterance);
+};
