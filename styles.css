@@ -236,3 +236,27 @@ td {
   height: auto;
   cursor: pointer;
 }
+
+.mountain {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.mountain:last-child {
+  border-bottom: none;
+}
+.mountain h2 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #4caf50;
+}
+.mountain p {
+  margin: 5px 0;
+  color: #555;
+}
+.mountain a {
+  color: #007bff;
+  text-decoration: none;
+}
+.mountain a:hover {
+  text-decoration: underline;
+}

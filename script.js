@@ -81,6 +81,31 @@ const changeCurrencySelector = (item) => {
   document.getElementById("selling-rate").innerText = currency.sell;
 };
 
+fetch(`${baseUrl}/mountains.json`).then((response) => {
+  const rawData = response.json();
+  rawData.then((data) => {
+    let htmlData = "";
+    data.forEach((item, index) => {
+      if (index < 3) {
+        htmlData += `
+        <div class="mountain">
+          <h2>
+            <a
+              href="${item.link}"
+              target="_blank"
+              >${item.name}</a
+            >
+          </h2>
+          <p>Height: <b>${item.height}</b></p>
+          <p>${item.note}</p>
+        </div>
+        `;
+      }
+    });
+    document.getElementById("mountain-list").innerHTML = htmlData;
+  });
+});
+
 const speak = (ele) => {
   const utterance = new SpeechSynthesisUtterance(ele.innerText);
   utterance.lang = "hi-IN";
