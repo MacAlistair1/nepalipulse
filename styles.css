@@ -260,3 +260,75 @@ td {
 .mountain a:hover {
   text-decoration: underline;
 }
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.input-container input {
+  width: calc(100% - 120px);
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.input-container button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.input-container button:hover {
+  background-color: #45a049;
+}
+.hashtag-box {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #e0f7fa;
+  border-radius: 4px;
+  color: #00796b;
+}
+.hashtag {
+  display: inline-block;
+  margin: 5px;
+  background-color: #00796b;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.hashtag:hover {
+  background-color: #004d40;
+}
+
+.copy-button {
+  background-color: #4caf50e3;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.copy-button:hover {
+  background-color: #357ae8;
+}
+
+.copied {
+  background-color: #8bc34a !important;
+  color: #fff;
+}
+
+.vlog-img {
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}

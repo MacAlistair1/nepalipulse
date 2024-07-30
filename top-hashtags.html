@@ -3,46 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Top Mountains of Nepal | Nepali Pulse</title>
+    <title>Top Hashtags | Nepali Pulse</title>
     <link rel="stylesheet" href="styles.css" />
 
     <meta
       name="description"
-      content="List of the top mountains in the world."
+      content="Search for top hashtags based on your keyword."
     />
-    <meta
-      name="keywords"
-      content="mountains, top mountains, highest mountains, Yalung Kang, Mount Everest, Kanchenjunga, Makalu"
-    />
+    <meta name="keywords" content="hashtags, top hashtags, search hashtags" />
     <meta name="author" content="Jeeven Lamichahne" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Top Mountains" />
+    <meta property="og:title" content="Top Hashtags" />
     <meta
       property="og:description"
-      content="List of the top mountains in the world."
+      content="Search for top hashtags based on your keyword."
     />
+
     <meta
       property="og:image"
-      content="https://nepalipulse.jeevenlamichhane.com.np/assets/mountain.png"
+      content="https://nepalipulse.jeevenlamichhane.com.np/assets/hashtag.png"
     />
     <meta
       property="og:url"
-      content="https://nepalipulse.jeevenlamichhane.com.np/top-mountains.html"
+      content="https://nepalipulse.jeevenlamichhane.com.np/top-hashtags.html"
     />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Top Mountains" />
+    <meta name="twitter:title" content="Top Hashtags" />
     <meta
       name="twitter:description"
-      content="List of the top mountains in the world."
+      content="Search for top hashtags based on your keyword."
     />
     <meta
       name="twitter:image"
-      content="https://nepalipulse.jeevenlamichhane.com.np/assets/mountain.png"
+      content="https://nepalipulse.jeevenlamichhane.com.np/assets/hashtag.png"
     />
     <meta name="twitter:site" content="@_nepalivlog" />
     <meta name="twitter:creator" content="@_nepalivlog" />
@@ -99,13 +97,38 @@
       <div class="card">
         <div class="section">
           <img
-            src="./assets/mountain.png"
-            alt="Top Mountains of Nepal"
+            src="./assets/hashtag.png"
+            alt="Top Hashtags"
             class="section-img"
           />
           <div class="section-content">
-            <h2>Top Mountains of Nepal</h2>
-            <div id="mountain-list"></div>
+            <h2>Top Social Hashtags</h2>
+
+            <div class="input-container">
+              <input
+                type="text"
+                id="keyword"
+                placeholder="Enter keyword..."
+              />
+              <button id="searchButton">Search</button>
+            </div>
+            <div id="hashtags" class="hashtags"></div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Nepali Vlog section -->
+       <div class="card">
+        <div class="section" onclick="window.location.href='https://youtube.com/@nepalivlog'">
+          <img
+            src="./assets/nepalivlog.png"
+            alt="Download from Play Store"
+            class="vlog-img"
+          />
+          <div class="section-content" >
+            <h2>
+              <span id="download">Visit</span> <span>YouTube</span>
+            </h2>
           </div>
         </div>
       </div>
@@ -135,25 +158,8 @@
           </div>
         </div>
       </div>
-
-      <!-- Nepali Vlog section -->
-      <div class="card">
-        <div
-          class="section"
-          onclick="window.location.href='https://youtube.com/@nepalivlog'"
-        >
-          <img
-            src="./assets/nepalivlog.png"
-            alt="Download from Play Store"
-            class="vlog-img"
-          />
-          <div class="section-content">
-            <h2><span id="download">Visit</span> <span>YouTube</span></h2>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <script src="./mountains.js" defer></script>
+    <script src="./top-hashtags.js" defer></script>
   </body>
 </html>
