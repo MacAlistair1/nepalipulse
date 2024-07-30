@@ -4,10 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const keywordInput = document.getElementById("keyword");
   const searchButton = document.getElementById("searchButton");
   const hashtagsContainer = document.getElementById("hashtags");
+  const loading = document.getElementById("loading");
 
   searchButton.addEventListener("click", () => {
     const keyword = keywordInput.value.trim();
     if (keyword.length > 0) {
+      loading.textContent = "fetching hashtags.";
+      setInterval(() => {
+        loading.textContent = loading.textContent + ".";
+      }, 900);
+      loading.style.display = "block";
+      hashtagsContainer.innerHTML = "";
       fetchHashtags(keyword);
     } else {
       hashtagsContainer.innerHTML = "";
@@ -18,10 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(`${baseUrl}/get-hashtags?keyword=${keyword}`)
       .then((response) => response.json())
       .then((data) => displayHashtags(data))
-      .catch((error) => console.error("Error fetching hashtags:", error));
+      .catch((error) => {
+        loading.textContent = error;
+        setTimeout(() => {
+          loading.style.display = "none";
+        }, 1000);
+        console.error("Error fetching hashtags:", error);
+      });
   };
 
   const displayHashtags = (hashtags) => {
+    loading.style.display = "none";
     hashtagsContainer.innerHTML = "";
     hashtags.forEach((hashtagGroup) => {
       const hashtagBox = document.createElement("div");
@@ -59,16 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.execCommand("copy");
     document.body.removeChild(textarea);
 
-     // Change button text and color
-     button.innerHTML = 'copied';
-     button.classList.add('copied');
+    // Change button text and color
+    button.innerHTML = "copied";
+    button.classList.add("copied");
 
-     setTimeout(function () {
-         // Reset button text and color after a delay (1.5 seconds in this example)
-         button.innerHTML = 'copy';
-         button.classList.remove('copied');
-     }, 1500);
-
-
+    setTimeout(function () {
+      // Reset button text and color after a delay (1.5 seconds in this example)
+      button.innerHTML = "copy";
+      button.classList.remove("copied");
+    }, 1500);
   };
 });
