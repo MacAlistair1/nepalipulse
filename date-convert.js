@@ -12,21 +12,38 @@ let yearOptions = "";
 let monthOptions = "";
 let dateOptions = "";
 
+const currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+let currentMonth = currentDate.getMonth() + 1;
+let currentDay = currentDate.getDate();
+
 const calTypeChange = (el) => {
   yearOptions = "";
   monthOptions = "";
   dateOptions = "";
   if (el.value == "BS") {
     engYear.forEach((item) => {
-      yearOptions += `<option value="${item}">${item}</option>`;
+      if (item == currentYear) {
+        yearOptions += `<option value="${item}" selected>${item}</option>`;
+      } else {
+        yearOptions += `<option value="${item}">${item}</option>`;
+      }
     });
 
     engMonth.forEach((item) => {
-      monthOptions += `<option value="${item}">${item}</option>`;
+      if (item == currentMonth) {
+        monthOptions += `<option value="${item}" selected>${item}</option>`;
+      } else {
+        monthOptions += `<option value="${item}">${item}</option>`;
+      }
     });
 
     engDay.forEach((item) => {
-      dateOptions += `<option value="${item}">${item}</option>`;
+      if (item == currentDay) {
+        dateOptions += `<option value="${item}" selected>${item}</option>`;
+      } else {
+        dateOptions += `<option value="${item}">${item}</option>`;
+      }
     });
   } else {
     nepYear.forEach((item) => {
@@ -56,21 +73,37 @@ const calTypeChange = (el) => {
 document.addEventListener("DOMContentLoaded", () => {
   if (calendarType.value == "BS") {
     engYear.forEach((item) => {
-      yearOptions += `<option value="${item}">${item}</option>`;
+      if (item == currentYear) {
+        yearOptions += `<option value="${item}" selected>${item}</option>`;
+      } else {
+        yearOptions += `<option value="${item}">${item}</option>`;
+      }
     });
 
     engMonth.forEach((item) => {
-      monthOptions += `<option value="${item}">${item}</option>`;
+      if (item == currentMonth) {
+        monthOptions += `<option value="${item}" selected>${item}</option>`;
+      } else {
+        monthOptions += `<option value="${item}">${item}</option>`;
+      }
     });
 
     engDay.forEach((item) => {
-      dateOptions += `<option value="${item}">${item}</option>`;
+      if (item == currentDay) {
+        dateOptions += `<option value="${item}" selected>${item}</option>`;
+      } else {
+        dateOptions += `<option value="${item}">${item}</option>`;
+      }
     });
 
     yearInput.innerHTML = yearOptions;
     monthInput.innerHTML = monthOptions;
     dateInput.innerHTML = dateOptions;
   }
+
+  setTimeout(() => {
+    convertButton.click();
+  }, 2000);
 
   convertButton.addEventListener("click", () => {
     const date = dateInput.value.trim();
