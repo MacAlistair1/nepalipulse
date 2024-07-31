@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nepali Date Convert | Nepali Pulse</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <meta
+      name="description"
+      content="Search for top hashtags based on your keyword."
+    />
+    <meta name="keywords" content="hashtags, top hashtags, search hashtags" />
+    <meta name="author" content="Jeeven Lamichahne" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Nepali Date Convert" />
+    <meta
+      property="og:description"
+      content="Search for top hashtags based on your keyword."
+    />
+
+    <meta
+      property="og:image"
+      content="https://nepalipulse.jeevenlamichhane.com.np/assets/hashtag.png"
+    />
+    <meta
+      property="og:url"
+      content="https://nepalipulse.jeevenlamichhane.com.np/top-hashtags.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Date Convert" />
+    <meta
+      name="twitter:description"
+      content="Search for top hashtags based on your keyword."
+    />
+    <meta
+      name="twitter:image"
+      content="https://nepalipulse.jeevenlamichhane.com.np/assets/hashtag.png"
+    />
+    <meta name="twitter:site" content="@_nepalivlog" />
+    <meta name="twitter:creator" content="@_nepalivlog" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div class="app-header">
+      <div class="app-title" onclick="location.href='/'">
+        <img
+          src="./assets/logo_white.png"
+          alt="Nepali Pulse Logo"
+          class="app-logo"
+        />
+        <h1>Nepali Pulse</h1>
+      </div>
+      <div
+        class="app-option-menu"
+        onclick="window.location.href='https://play.google.com/store/apps/details?id=com.miscommunity.nepalipulse'"
+      >
+        <img
+          src="./assets/google-play-badge.png"
+          alt="Download App"
+          class="opt-img"
+        />
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <div class="section">
+          <img
+            src="./assets/calendar.png"
+            alt="Date Convert"
+            class="section-img"
+          />
+          <div class="section-content">
+            <h2>Nepali Date Convert</h2>
+
+            <div class="input-container">
+              <input type="date" id="date" placeholder="Enter keyword..." />
+              <button id="convertButton">Convert</button>
+            </div>
+            <div
+              id="loading"
+              class="hashtags"
+              style="text-align: center; display: none"
+            ></div>
+            <div id="data" class="hashtags"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Download Mobile App section -->
+      <div class="card">
+        <div class="section">
+          <img
+            src="./assets/playstore.png"
+            alt="Download from Play Store"
+            class="section-img"
+          />
+          <div class="section-content">
+            <h2>
+              <span id="download">Download</span> <span>NepaliPulse</span>
+            </h2>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.miscommunity.nepalipulse"
+              class="download-link"
+            >
+              <img
+                src="./assets/google-play-badge.png"
+                alt="Get it on Google Play"
+                class="google-play-badge"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nepali Vlog section -->
+      <div class="card">
+        <div
+          class="section"
+          onclick="window.location.href='https://youtube.com/@nepalivlog'"
+        >
+          <img
+            src="./assets/nepalivlog.png"
+            alt="Download from Play Store"
+            class="vlog-img"
+          />
+          <div class="section-content">
+            <h2><span id="download">Visit</span> <span>YouTube</span></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./date-convert.js" defer></script>
+  </body>
+</html>
