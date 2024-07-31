@@ -1,10 +1,76 @@
 const baseUrl = "https://jeevenlamichhane.com.np/api";
 
+const calendarType = document.getElementById("calendarType");
+const yearInput = document.getElementById("year");
+const monthInput = document.getElementById("month");
+const dateInput = document.getElementById("date");
+const convertButton = document.getElementById("convertButton");
+const container = document.getElementById("data");
+const loading = document.getElementById("loading");
+
+let yearOptions = "";
+let monthOptions = "";
+let dateOptions = "";
+
+const calTypeChange = (el) => {
+  yearOptions = "";
+  monthOptions = "";
+  dateOptions = "";
+  if (el.value == "BS") {
+    engYear.forEach((item) => {
+      yearOptions += `<option value="${item}">${item}</option>`;
+    });
+
+    engMonth.forEach((item) => {
+      monthOptions += `<option value="${item}">${item}</option>`;
+    });
+
+    engDay.forEach((item) => {
+      dateOptions += `<option value="${item}">${item}</option>`;
+    });
+  } else {
+    nepYear.forEach((item) => {
+      yearOptions += `<option value="${Object.values(item)[0]}">${
+        Object.keys(item)[0]
+      }</option>`;
+    });
+
+    nepMonth.forEach((item) => {
+      monthOptions += `<option value="${Object.values(item)[0]}">${
+        Object.keys(item)[0]
+      }</option>`;
+    });
+
+    nepDay.forEach((item) => {
+      dateOptions += `<option value="${Object.values(item)[0]}">${
+        Object.keys(item)[0]
+      }</option>`;
+    });
+  }
+
+  yearInput.innerHTML = yearOptions;
+  monthInput.innerHTML = monthOptions;
+  dateInput.innerHTML = dateOptions;
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-  const dateInput = document.getElementById("date");
-  const convertButton = document.getElementById("convertButton");
-  const container = document.getElementById("data");
-  const loading = document.getElementById("loading");
+  if (calendarType.value == "BS") {
+    engYear.forEach((item) => {
+      yearOptions += `<option value="${item}">${item}</option>`;
+    });
+
+    engMonth.forEach((item) => {
+      monthOptions += `<option value="${item}">${item}</option>`;
+    });
+
+    engDay.forEach((item) => {
+      dateOptions += `<option value="${item}">${item}</option>`;
+    });
+
+    yearInput.innerHTML = yearOptions;
+    monthInput.innerHTML = monthOptions;
+    dateInput.innerHTML = dateOptions;
+  }
 
   convertButton.addEventListener("click", () => {
     const date = dateInput.value.trim();
@@ -15,14 +81,22 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 900);
       loading.style.display = "block";
       container.innerHTML = "";
-      fetchHashtags(date);
+      convertDate(
+        yearInput.value,
+        monthInput.value,
+        dateInput.value,
+        calendarType.value
+      );
     } else {
       container.innerHTML = "";
     }
   });
 
-  const fetchHashtags = (date) => {
-    fetch(`${baseUrl}/convert-date?date=${date}`)
+  const convertDate = (year, month, date, calType) => {
+    const fullDate = `${year}-${month}-${date}`;
+    const dateType = calType == "AD" ? "AD" : "";
+
+    fetch(`${baseUrl}/convert-date?date=${fullDate}&dateType=${dateType}`)
       .then((response) => response.json())
       .then((data) => displayResult(data))
       .catch((error) => {

@@ -333,3 +333,25 @@ td {
   margin-bottom: 10px;
   object-fit: contain;
 }
+
+.date-select {
+  margin-right: 10px;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.radio-container label {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.radio-container input[type="radio"] {
+  margin-right: 5px;
+}
+
+#convertButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -104,10 +104,35 @@
           <div class="section-content">
             <h2>Nepali Date Convert</h2>
 
-            <div class="input-container">
+            <!-- <div class="input-container">
               <input type="date" id="date" placeholder="Enter keyword..." />
               <button id="convertButton">Convert</button>
+            </div> -->
+
+            <div class="input-container">
+              <select id="year" class="date-select">
+                <option value="">Year</option>
+              </select>
+              <select id="month" class="date-select">
+                <option value="">Month</option>
+              </select>
+              <select id="date" class="date-select">
+                <option value="">Date</option>
+              </select>
             </div>
+
+            <div class="input-container radio-container">
+              <select id="calendarType" class="date-select" onchange="calTypeChange(this)">
+                <option value="AD">AD</option>
+                <option value="BS" selected>BS</option>
+              </select>
+            </div>
+
+            <!-- Convert Button -->
+            <div class="input-container">
+              <button id="convertButton">Convert</button>
+            </div>
+
             <div
               id="loading"
               class="hashtags"
@@ -162,6 +187,7 @@
       </div>
     </div>
 
+    <script src="./date-list.js" defer></script>
     <script src="./date-convert.js" defer></script>
   </body>
 </html>
