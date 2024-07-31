@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nepali Date Convert | Nepali Pulse</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="calendar.css" />
 
     <meta
       name="description"
@@ -104,11 +105,6 @@
           <div class="section-content">
             <h2>Nepali Date Convert</h2>
 
-            <!-- <div class="input-container">
-              <input type="date" id="date" placeholder="Enter keyword..." />
-              <button id="convertButton">Convert</button>
-            </div> -->
-
             <div class="input-container">
               <select id="year" class="date-select">
                 <option value="">Year</option>
@@ -122,7 +118,11 @@
             </div>
 
             <div class="input-container radio-container">
-              <select id="calendarType" class="date-select" onchange="calTypeChange(this)">
+              <select
+                id="calendarType"
+                class="date-select"
+                onchange="calTypeChange(this)"
+              >
                 <option value="AD">AD</option>
                 <option value="BS" selected>BS</option>
               </select>
@@ -139,6 +139,34 @@
               style="text-align: center; display: none"
             ></div>
             <div id="data" class="hashtags"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-card">
+        <div class="date">
+          <div class="rectangle-circle-today">
+            <div class="day">१६</div>
+            <div class="day-text">बुधबार</div>
+          </div>
+          <div class="nepali-date">
+            साउन, २०८१<br />
+            ने.सं. ११४४, दिल्लीगा <br>
+            
+          </div>
+        </div>
+        <div class="info todaysEvents">एकादशी, श्रावण कृष्णपक्ष<br />कामिका एकादशी व्रत</div>
+        <div class="time">02:34:21 PM</div>
+        <div class="dt">31 July, 2024</div>
+        <div class="sun-times">
+          <div>
+            <img src="./assets/sunrise.png" alt="Sunrise Icon" width="32" loading="eager" />
+            <div>०५:१७</div>
+          </div>
+
+          <div>
+            <img src="./assets/sunset.png" alt="Sunset Icon" width="32" loading="eager" />
+            <div>१८:५५</div>
           </div>
         </div>
       </div>

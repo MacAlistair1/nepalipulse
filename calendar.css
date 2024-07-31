@@ -1,0 +1,76 @@
+.p-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 30px;
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rectangle-circle-today {
+  width: 90px;
+  height: 90px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.date .day {
+  font-size: 40px;
+  color: #e74c3c;
+  font-weight: bold;
+}
+.date .day-text {
+  font-size: 16px;
+  color: #666;
+}
+.date .nepali-date {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+.info {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.todaysEvents {
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 3px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.time {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dt {
+  text-align: center;
+  margin: 20px 0px;
+}
+.sun-times {
+  display: flex;
+  justify-content: space-around;
+}
+.sun-times div {
+  text-align: center;
+  margin: 5px;
+}
