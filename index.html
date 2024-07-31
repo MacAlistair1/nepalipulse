@@ -71,6 +71,8 @@
 
     <link rel="stylesheet" href="styles.css" />
 
+    <link rel="stylesheet" href="calendar.css" />
+
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -119,6 +121,40 @@
       </div>
     </div>
     <div class="container">
+      <div class="p-card">
+        <div class="date">
+          <div class="rectangle-circle-today">
+            <div class="day" id="day"></div>
+            <div class="day-text" id="day-text"></div>
+          </div>
+          <div class="nepali-date" id="nepali-date"></div>
+        </div>
+        <div class="info todaysEvents" id="todaysEvents"></div>
+        <div class="time" id="time">02:34:21 PM</div>
+        <div class="dt" id="dt">31 July, 2024</div>
+        <div class="sun-times">
+          <div>
+            <img
+              src="./assets/sunrise.png"
+              alt="Sunrise Icon"
+              width="32"
+              loading="eager"
+            />
+            <div id="sunrise"></div>
+          </div>
+
+          <div>
+            <img
+              src="./assets/sunset.png"
+              alt="Sunset Icon"
+              width="32"
+              loading="eager"
+            />
+            <div id="sunset"></div>
+          </div>
+        </div>
+      </div>
+
       <div class="card">
         <div class="section" onclick="location.href='/oil.html'">
           <img
@@ -344,5 +380,6 @@
     </div>
 
     <script src="./script.js" defer></script>
+    <script src="./patro.js" defer></script>
   </body>
 </html>
