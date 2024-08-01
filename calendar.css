@@ -11,8 +11,8 @@
 }
 
 .rectangle-circle-today {
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   background-color: #f5f5f5;
   border-radius: 50%;
   display: flex;
@@ -29,11 +29,11 @@
 }
 .date .day {
   font-size: 40px;
-  color: #e74c3c;
+  color: #4caf50;
   font-weight: bold;
 }
 .date .day-text {
-  font-size: 16px;
+  font-size: 17px;
   color: #666;
 }
 .date .nepali-date {
