@@ -8,27 +8,13 @@ const firebaseConfig = {
   measurementId: "G-TRHV540C25",
 };
 
-// Ensure Firebase SDK is loaded
-console.log("Checking Firebase SDK...");
-if (typeof firebase !== "undefined") {
-  console.log("Firebase SDK loaded successfully");
-} else {
-  console.error("Firebase SDK is not loaded");
-}
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 console.log("Firebase initialized");
 
 // Initialize Firebase Messaging
-try {
-  const messaging = firebase.messaging();
-  console.log("Firebase Messaging initialized");
-} catch (error) {
-  console.error("Error initializing Firebase Messaging:", error);
-}
+const messaging = firebase.messaging();
 
-// Request permission for notifications (for browsers, permission is typically handled via the Notification API)
 Notification.requestPermission()
   .then((permission) => {
     if (permission === "granted") {
