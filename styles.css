@@ -261,6 +261,32 @@ td {
   text-decoration: underline;
 }
 
+
+.lake {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.lake:last-child {
+  border-bottom: none;
+}
+.lake h3 {
+  margin: 0;
+  color: #4caf50;
+  text-align: left !important;
+}
+.lake p {
+  margin: 5px 0;
+  color: #555;
+}
+.lake a {
+  color: #007bff;
+  text-decoration: none;
+}
+.lake a:hover {
+  text-decoration: underline;
+}
+
+
 .input-container {
   display: flex;
   justify-content: center;

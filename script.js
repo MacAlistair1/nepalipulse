@@ -90,11 +90,7 @@ fetch(`${baseUrl}/mountains.json`).then((response) => {
         htmlData += `
         <div class="mountain">
           <h2>
-            <a
-              href="${item.link}"
-              target="_blank"
-              >${item.name}</a
-            >
+          <a>${item.name}</a>
           </h2>
           <p>Height: <b>${item.height}</b></p>
           <p>${item.note}</p>
@@ -103,6 +99,23 @@ fetch(`${baseUrl}/mountains.json`).then((response) => {
       }
     });
     document.getElementById("mountain-list").innerHTML = htmlData;
+  });
+});
+
+fetch(`${baseUrl}/lakes.json`).then((response) => {
+  const rawData = response.json();
+  rawData.then((data) => {
+    let htmlData = "";
+    data.forEach((item, index) => {
+      htmlData += `
+      <div class="lake">
+        <h3>
+        <a> ${++index}. ${item.name}</a>
+        </h3>
+      </div>
+      `;
+    });
+    document.getElementById("lake-list").innerHTML = htmlData;
   });
 });
 
