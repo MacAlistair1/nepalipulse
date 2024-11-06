@@ -261,7 +261,6 @@ td {
   text-decoration: underline;
 }
 
-
 .lake {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
@@ -285,7 +284,6 @@ td {
 .lake a:hover {
   text-decoration: underline;
 }
-
 
 .input-container {
   display: flex;
@@ -380,4 +378,57 @@ td {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.upcoming-events {
+  border-radius: 8px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.upcoming-events h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.event-card {
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px;
+}
+
+.event-card:hover {
+  background-color: #f5f5f5;
+}
+
+.event-card:last-child {
+  border-bottom: none;
+}
+
+.event-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1em;
+}
+
+.event-info h3 {
+  font-size: 1rem;
+  color: #d32f2f;
+  margin: 0;
+}
+
+.event-info p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0.2em 0 0;
+}
+
+.event-meta {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: #ad0d0d;
 }

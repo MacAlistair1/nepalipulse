@@ -119,6 +119,26 @@ fetch(`${baseUrl}/lakes.json`).then((response) => {
   });
 });
 
+fetch(`${baseUrl}/events.json`).then((response) => {
+  const rawData = response.json();
+  rawData.then((data) => {
+    let htmlData = "<h2>Upcoming Events</h2>";
+    data.forEach((item, index) => {
+      htmlData += `
+      <div class="event-card">
+            <img src="${item.img}" alt="${item.name}" class="event-image" />
+            <div class="event-info">
+              <h3>${item.name}</h3>
+              <p>${item.date}</p>
+            </div>
+            <div class="event-meta">${item.status}</div>
+          </div>
+      `;
+    });
+    document.getElementById("upcoming-events").innerHTML = htmlData;
+  });
+});
+
 const speak = (ele) => {
   const utterance = new SpeechSynthesisUtterance(ele.innerText);
   utterance.lang = "hi-IN";
