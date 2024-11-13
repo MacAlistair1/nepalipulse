@@ -192,13 +192,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 1500);
   };
 
- const startOfYear = new Date(currentYear, currentDate.getMonth(), currentDay+1);
- const endOfYear = new Date(currentYear+1, currentDate.getMonth(), currentDay+1);
+  const startOfYear = new Date(
+    currentYear,
+    currentDate.getMonth(),
+    currentDay + 1
+  );
+  const endOfYear = new Date(
+    currentYear + 1,
+    currentDate.getMonth(),
+    currentDay + 1
+  );
 
   startDateInput.value = startOfYear.toISOString().split("T")[0];
   endDateInput.value = endOfYear.toISOString().split("T")[0];
-
-  console.log(startOfYear, endOfYear);
 });
 
 const counterTypeChange = (el) => {
@@ -206,11 +212,17 @@ const counterTypeChange = (el) => {
   const endDate = endDateInput.value;
   const countingParameter = el.value;
 
-  if (startDate != "" && endDate != "" && countingParameter != "") {
+  if (startDate && endDate && countingParameter) {
     let count = 0;
-    let currentDate = new Date(startDateInput.value);
+    let currentDate = new Date(startDate);
 
-    while (currentDate <= new Date(endDateInput.value)) {
+    // Determine the direction of the loop based on the date order
+    const step = new Date(startDate) <= new Date(endDate) ? 1 : -1;
+
+    while (
+      (step > 0 && currentDate <= new Date(endDate)) ||
+      (step < 0 && currentDate >= new Date(endDate))
+    ) {
       if (
         countingParameter === "*" ||
         currentDate.toLocaleString("en-US", { weekday: "long" }) ===
@@ -218,15 +230,14 @@ const counterTypeChange = (el) => {
       ) {
         count++;
       }
-      currentDate.setDate(currentDate.getDate() + 1);
+      currentDate.setDate(currentDate.getDate() + step);
     }
 
     countedData.style.display = "block";
     daysCount.innerHTML = count;
-    if (countingParameter == "*") {
-      daysCountLabel.innerHTML = "Days in Total";
-    } else {
-      daysCountLabel.innerHTML = `${countingParameter}s in Total`;
-    }
+    daysCountLabel.innerHTML =
+      countingParameter === "*"
+        ? "Days in Total"
+        : `${countingParameter}s in Total`;
   }
 };
