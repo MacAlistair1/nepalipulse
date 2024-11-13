@@ -143,6 +143,52 @@
         </div>
       </div>
 
+      <!-- Date/days calculation -->
+      <div class="card">
+        <div class="section">
+          <div class="section-content">
+            <h2>Count Days</h2>
+
+            <div class="input-container">
+              <input
+                id="fromDate"
+                class="date-select"
+                placeholder="Start Date"
+                type="date"
+              />
+
+              <input
+                id="toDate"
+                class="date-select"
+                placeholder="End Date"
+                type="date"
+              />
+            </div>
+
+            <div class="input-container radio-container">
+              <select id="counterType" class="date-select"  onchange="counterTypeChange(this)">
+                <option value="" selected disabled>
+                  Select Counting Parameter
+                </option>
+                <option value="*">Total Days Count</option>
+                <option value="Sunday">Total Sunday Count</option>
+                <option value="Monday">Total Monday Count</option>
+                <option value="Tuesday">Total Tuesday Count</option>
+                <option value="Wednesday">Total Wednesday Count</option>
+                <option value="Thursday">Total Thursday Count</option>
+                <option value="Friday">Total Friday Count</option>
+                <option value="Saturday">Total Saturday Count</option>
+              </select>
+            </div>
+
+            <div id="counted-data" class="hashtags" style="text-align: center;display:none;">
+              <h1 class="hashtag" id="days"></h1>
+              <span id="daysLabel"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="p-card">
         <div class="date">
           <div class="rectangle-circle-today">

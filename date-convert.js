@@ -8,6 +8,12 @@ const convertButton = document.getElementById("convertButton");
 const container = document.getElementById("data");
 const loading = document.getElementById("loading");
 
+const startDateInput = document.getElementById("fromDate");
+const endDateInput = document.getElementById("toDate");
+const countedData = document.getElementById("counted-data");
+const daysCount = document.getElementById("days");
+const daysCountLabel = document.getElementById("daysLabel");
+
 let yearOptions = "";
 let monthOptions = "";
 let dateOptions = "";
@@ -185,4 +191,42 @@ document.addEventListener("DOMContentLoaded", () => {
       button.classList.remove("copied");
     }, 1500);
   };
+
+ const startOfYear = new Date(currentYear, currentDate.getMonth(), currentDay+1);
+ const endOfYear = new Date(currentYear+1, currentDate.getMonth(), currentDay+1);
+
+  startDateInput.value = startOfYear.toISOString().split("T")[0];
+  endDateInput.value = endOfYear.toISOString().split("T")[0];
+
+  console.log(startOfYear, endOfYear);
 });
+
+const counterTypeChange = (el) => {
+  const startDate = startDateInput.value;
+  const endDate = endDateInput.value;
+  const countingParameter = el.value;
+
+  if (startDate != "" && endDate != "" && countingParameter != "") {
+    let count = 0;
+    let currentDate = new Date(startDateInput.value);
+
+    while (currentDate <= new Date(endDateInput.value)) {
+      if (
+        countingParameter === "*" ||
+        currentDate.toLocaleString("en-US", { weekday: "long" }) ===
+          countingParameter
+      ) {
+        count++;
+      }
+      currentDate.setDate(currentDate.getDate() + 1);
+    }
+
+    countedData.style.display = "block";
+    daysCount.innerHTML = count;
+    if (countingParameter == "*") {
+      daysCountLabel.innerHTML = "Days in Total";
+    } else {
+      daysCountLabel.innerHTML = `${countingParameter}s in Total`;
+    }
+  }
+};
