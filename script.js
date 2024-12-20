@@ -81,7 +81,7 @@ const changeCurrencySelector = (item) => {
   document.getElementById("selling-rate").innerText = currency.sell;
 };
 
-fetch(`${baseUrl}/mountains.json`).then((response) => {
+fetch(`${baseUrl}/topPeaks.json`).then((response) => {
   const rawData = response.json();
   rawData.then((data) => {
     let htmlData = "";
@@ -89,11 +89,10 @@ fetch(`${baseUrl}/mountains.json`).then((response) => {
       if (index < 3) {
         htmlData += `
         <div class="mountain">
+          <img src="${item.img}" alt="Top Mountains" class="peak-img">
           <h2>
-          <a>${item.name}</a>
+          <a>${item.peak}</a> <small>(${item.elevation.toLowerCase()})</small>
           </h2>
-          <p>Height: <b>${item.height}</b></p>
-          <p>${item.note}</p>
         </div>
         `;
       }

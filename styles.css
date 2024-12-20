@@ -261,6 +261,11 @@ td {
   text-decoration: underline;
 }
 
+.mountain img {
+  width: 100%;
+  height: 10%;
+}
+
 .lake {
   border-bottom: 1px solid #ddd;
   padding: 10px 0;
