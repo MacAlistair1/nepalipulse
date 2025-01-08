@@ -7,31 +7,33 @@
 
     <meta
       name="description"
-      content="Discover the top music videos of Nepal, featuring the most popular Nepali songs, artists, and videos from various genres."
+      content="Stay updated with real-time earthquake alerts and recent seismic activity in Nepal. Get epicenter details, magnitude, and time of recent earthquakes instantly."
     />
+
     <meta
       name="keywords"
-      content="top music videos, Nepali music, Nepali songs, best Nepali music, all-time top music, Nepali artists, Nepali music videos, popular Nepali songs"
+      content="Nepal earthquake updates, recent earthquake, live earthquake data, seismic activity Nepal, epicenter, earthquake magnitude, latest earthquakes, Nepal seismic alerts"
     />
-    <meta name="author" content="Jeeven Lamichahne" />
+
+    <meta name="author" content="Jeeven Lamichhane" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph Meta Tags (For Facebook, LinkedIn, etc.) -->
     <meta
       property="og:title"
-      content="Top Nepali Music Videos - Watch the Best Songs"
+      content="Recent Earthquakes in Nepal - Live Updates"
     />
     <meta
       property="og:description"
-      content="Explore the all-time top Nepali music videos featuring the best songs and performances by popular Nepali artists."
+      content="Track the latest earthquakes in Nepal with real-time updates on magnitude, epicenter, and impact. Stay informed and prepared!"
     />
     <meta
       property="og:image"
-      content="https://nepalipulse.jeevenlamichhane.com.np/assets/top.png"
+      content="https://nepalipulse.jeevenlamichhane.com.np/assets/earthquake.png"
     />
     <meta
       property="og:url"
-      content="https://nepalipulse.jeevenlamichhane.com.np/top-music-video.html"
+      content="https://nepalipulse.jeevenlamichhane.com.np/earthquake.html"
     />
     <meta property="og:type" content="website" />
 
@@ -39,20 +41,27 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Top Nepali Music Videos - Watch the Best Songs"
+      content="Live Earthquake Updates - Nepal Seismic Activity"
     />
     <meta
       name="twitter:description"
-      content="Discover the all-time best Nepali music videos, featuring top songs and performances from renowned Nepali artists."
+      content="Get real-time earthquake alerts, magnitude, epicenter, and time of recent earthquakes in Nepal. Stay informed and prepared!"
     />
     <meta
       name="twitter:image"
-      content="https://nepalipulse.jeevenlamichhane.com.np/assets/top.png"
+      content="https://nepalipulse.jeevenlamichhane.com.np/assets/earthquake.png"
     />
     <meta name="twitter:site" content="@_nepalivlog" />
     <meta name="twitter:creator" content="@_nepalivlog" />
 
+    <!-- Canonical URL (Avoid duplicate content issues) -->
+    <link
+      rel="canonical"
+      href="https://nepalipulse.jeevenlamichhane.com.np/earthquake.html"
+    />
+
     <link rel="stylesheet" href="styles.css" />
+
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -76,6 +85,7 @@
       href="favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
+
     <script
       async
       src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4169711514328840"
@@ -103,21 +113,12 @@
         />
       </div>
     </div>
-
     <div class="container">
       <div class="card">
-        <div class="section">
-          <img
-            src="./assets/top.png"
-            alt="Top Music Video"
-            class="section-img"
-          />
+        <div class="eq-section">
           <div class="section-content">
-            <h2>Top Music Video</h2>
-            <p style="margin: 10px">
-              Last Updated: <span id="last-updated"></span>
-            </p>
-            <div class="music-list" id="music-list"></div>
+            <h3>🌍 Recent Earthquake Updates</h3>
+            <div id="earthquake-list"></div>
           </div>
         </div>
       </div>
@@ -166,6 +167,6 @@
       </div>
     </div>
 
-    <script src="./top-music-video.js" defer></script>
+    <script src="./earthquake.js" defer></script>
   </body>
 </html>

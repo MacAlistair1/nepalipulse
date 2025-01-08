@@ -106,13 +106,16 @@ fetch(`${baseUrl}/lakes.json`).then((response) => {
   rawData.then((data) => {
     let htmlData = "";
     data.forEach((item, index) => {
-      htmlData += `
+      if (index <= 4) {
+        htmlData += `
       <div class="lake">
         <h3>
         <a> ${++index}. ${item.name}</a>
         </h3>
       </div>
       `;
+      }
+      
     });
     document.getElementById("lake-list").innerHTML = htmlData;
   });
@@ -135,6 +138,23 @@ fetch(`${baseUrl}/events.json`).then((response) => {
       `;
     });
     document.getElementById("upcoming-events").innerHTML = htmlData;
+  });
+});
+
+fetch(`${baseUrl}/earthquakes.json`).then((response) => {
+  const rawData = response.json();
+  rawData.then((data) => {
+    let htmlData = "";
+    data.forEach((item, index) => {
+      if (index == 0) {
+        htmlData = `
+        <p class="earthquake-info"><strong>📅 DateTime:</strong> ${item.date} ${item.time}</p>
+              <p class="earthquake-info"><strong>🌡 Magnitude:</strong> <span class="magnitude"> ${item.magnitude}</span></p>
+              <p class="earthquake-info"><strong>📍 Epicenter:</strong> ${item.epicenter}</p>
+              <p class="earthquake-info"><strong>📌 Location:</strong> ${item.lat}, ${item.long}</p>`;
+      }
+    });
+    document.getElementById("earthquake-list").innerHTML = htmlData;
   });
 });
 
