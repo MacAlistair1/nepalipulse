@@ -455,7 +455,7 @@ td {
 }
 
 /* Add slight shake animation on hover */
-.section:hover {
+.shake:hover {
   transform: scale(1.02) rotate(0.5deg);
   box-shadow: 0 10px 20px rgba(255, 69, 0, 0.5);
 }

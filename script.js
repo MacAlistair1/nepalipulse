@@ -88,7 +88,7 @@ fetch(`${baseUrl}/topPeaks.json`).then((response) => {
     data.forEach((item, index) => {
       if (index < 3) {
         htmlData += `
-        <div class="mountain">
+        <div class="mountain shake">
           <img src="${item.img}" alt="Top Mountains" class="peak-img">
           <h2>
           <a>${item.peak}</a> <small>(${item.elevation.toLowerCase()})</small>
