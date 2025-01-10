@@ -10,7 +10,7 @@ fetch(`${baseUrl}/earthquakes.json`).then((response) => {
         <p class="earthquake-info"><strong>📅 DateTime:</strong> ${item.date} ${item.time}</p>
         <p class="earthquake-info"><strong>🌡 Magnitude:</strong> <span class="magnitude"> ${item.magnitude}</span></p>
         <p class="earthquake-info"><strong>📍 Epicenter:</strong> ${item.epicenter}</p>
-        <p class="earthquake-info"><strong>📌 Location:</strong> ${item.lat}, ${item.long}</p> <hr style="margin:10px;">`;
+        <p class="earthquake-info"><strong>📌 Location:</strong> <a href="https://maps.google.com/?q=${item.lat},${item.long}" target="_blank"> ${item.lat}, ${item.long}</a></p> <hr style="margin:10px;">`;
     });
     document.getElementById("earthquake-list").innerHTML = htmlData;
   });
