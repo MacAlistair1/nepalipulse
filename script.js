@@ -63,6 +63,7 @@ fetch(`${baseUrl}/currency.json`).then((response) => {
       <option value='${item.code}' selected>${item.name} (${item.code})</option>`;
         document.getElementById("buying-rate").innerText = item.buy;
         document.getElementById("selling-rate").innerText = item.sell;
+        document.getElementById("currency-date").innerText = item.date;
       } else {
         htmlData += `
         <option value='${item.code}'>${item.name} (${item.code})</option>`;
