@@ -426,18 +426,21 @@ td {
   font-size: 1rem;
   color: #d32f2f;
   margin: 0;
+  text-align: left;
 }
 
 .event-info p {
   font-size: 0.9rem;
   color: #666;
   margin: 0.2em 0 0;
+  text-align: center;
 }
 
 .event-meta {
   margin-left: auto;
   font-size: 0.9rem;
   color: #ad0d0d;
+  text-align: right;
 }
 
 /* Earthquake Card Container */
