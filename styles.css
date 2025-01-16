@@ -296,6 +296,7 @@ td {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .input-container input {
   width: calc(100% - 120px);
