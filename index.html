@@ -148,6 +148,40 @@
         </div>
       </div>
 
+      <div class="card">
+        <div class="section shake" onclick="location.href='/oil.html'">
+          <!-- <img
+            src="./assets/noc.png"
+            alt="Nepal Oil Corporation"
+            class="section-img"
+          /> -->
+          <div class="section-content">
+            <h2>Nepal Oil Corporation</h2>
+            <p style="margin-bottom: 1rem">
+              Effective From: <span id="oil-effective-date">N\A</span>
+            </p>
+            <div class="price-grid">
+              <div class="price-item">
+                <h3>Petrol</h3>
+                <p id="petrol" onclick="speak(this)">Rs. N\A</p>
+              </div>
+              <div class="price-item">
+                <h3>Diesel</h3>
+                <p id="diesel" onclick="speak(this)">Rs. N\A</p>
+              </div>
+              <div class="price-item">
+                <h3>Kerosene</h3>
+                <p id="kerosene" onclick="speak(this)">Rs. N\A</p>
+              </div>
+              <div class="price-item">
+                <h3>LPG Gas</h3>
+                <p id="lpg" onclick="speak(this)">Rs. N\A</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="p-card">
         <div class="date">
           <div class="rectangle-circle-today">
@@ -188,40 +222,6 @@
         <hr style="margin: 1rem" />
 
         <div class="upcoming-events" id="upcoming-events"></div>
-      </div>
-
-      <div class="card">
-        <div class="section shake" onclick="location.href='/oil.html'">
-          <img
-            src="./assets/noc.png"
-            alt="Nepal Oil Corporation"
-            class="section-img"
-          />
-          <div class="section-content">
-            <h2>Nepal Oil Corporation</h2>
-            <p style="margin-bottom: 1rem">
-              Effective From: <span id="oil-effective-date">N\A</span>
-            </p>
-            <div class="price-grid">
-              <div class="price-item">
-                <h3>Petrol</h3>
-                <p id="petrol" onclick="speak(this)">Rs. N\A</p>
-              </div>
-              <div class="price-item">
-                <h3>Diesel</h3>
-                <p id="diesel" onclick="speak(this)">Rs. N\A</p>
-              </div>
-              <div class="price-item">
-                <h3>Kerosene</h3>
-                <p id="kerosene" onclick="speak(this)">Rs. N\A</p>
-              </div>
-              <div class="price-item">
-                <h3>LPG Gas</h3>
-                <p id="lpg" onclick="speak(this)">Rs. N\A</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <div class="card">
@@ -278,7 +278,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="gold-card">
         <div class="section">
           <img src="./assets/tola.png" alt="Gold" class="section-img" />
           <div class="section-content">
@@ -430,7 +430,45 @@
       </div>
     </div>
 
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+      <div class="nav-item active" onclick="location.href='/'">
+        <img src="./assets/nav-icons/home.svg" alt="Home" class="nav-icon" />
+        <span>Home</span>
+      </div>
+      <div class="nav-item" onclick="location.href='/date-convert.html'">
+        <img
+          src="./assets/nav-icons/date.svg"
+          alt="Date Convert"
+          class="nav-icon"
+        />
+        <span>Date Convert</span>
+      </div>
+      <div class="nav-item" onclick="location.href='/top-hashtags.html'">
+        <img
+          src="./assets/nav-icons/hashtags.svg"
+          alt="Hashtags"
+          class="nav-icon"
+        />
+        <span>Social Hashtags</span>
+      </div>
+      <div class="nav-item" onclick="location.href='#gold-card'">
+        <img
+          src="./assets/nav-icons/gold.svg"
+          alt="Gold/Silver Price"
+          class="nav-icon"
+        />
+        <span>Gold &amp; Silver</span>
+      </div>
+      <div class="nav-item" onclick="copyUrl()">
+        <img src="./assets/nav-icons/share.svg" alt="Share" class="nav-icon" />
+        <span id="copy-text">Share</span>
+      </div>
+    </div>
+    <!-- Bottom Navigation -->
+
     <script src="./script.js" defer></script>
     <script src="./patro.js" defer></script>
+    <script src="./common.js" defer></script>
   </body>
 </html>

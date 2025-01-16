@@ -116,7 +116,6 @@ fetch(`${baseUrl}/lakes.json`).then((response) => {
       </div>
       `;
       }
-      
     });
     document.getElementById("lake-list").innerHTML = htmlData;
   });
