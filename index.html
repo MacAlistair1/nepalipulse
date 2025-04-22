@@ -227,6 +227,35 @@
       <div class="card">
         <div class="section">
           <img
+            src="./assets/horoscope.png"
+            alt="Horoscope"
+            class="section-img"
+          />
+          <div class="section-content">
+            <h2>Mero Rashifal</h2>
+            <p>Updated On: <span id="rashifal-date"></span></p>
+            <div class="rashifal-converter">
+              <select
+                id="rashifal"
+                onchange="changeRashifalSelector(this)"
+              ></select>
+              <div class="exchange-rate">
+                <div class="price-grid">
+                  <div class="price-item shake">
+                    <h3 onclick="speak(this)">
+                      <span id="rashifal-desc">N\A</span>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section">
+          <img
             src="./assets/share.png"
             alt="Share Market"
             class="section-img"

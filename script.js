@@ -2,6 +2,7 @@ const baseUrl =
   "https://raw.githubusercontent.com/MacAlistair1/scrap-data/main";
 
 let currencyList = [];
+let rashifalList = [];
 
 fetch(`${baseUrl}/oil.json`).then((response) => {
   const rawData = response.json();
@@ -157,6 +158,37 @@ fetch(`${baseUrl}/earthquakes.json`).then((response) => {
     document.getElementById("earthquake-list").innerHTML = htmlData;
   });
 });
+
+
+fetch(`${baseUrl}/rashifal.json`).then((response) => {
+  const rawData = response.json();
+  rawData.then((data) => {
+    rashifalList = data;
+
+    let htmlData = "";
+
+    data.forEach((item, index) => {
+      if (index == 0) {
+        htmlData += `
+      <option value='${item.name}' selected>${item.name}</option>`;
+        document.getElementById("rashifal-desc").innerText = item.rashifal;
+        document.getElementById("rashifal-date").innerText = item.last_updated;
+      } else {
+        htmlData += `
+        <option value='${item.name}'>${item.name}</option>`;
+      }
+    });
+    document.getElementById("rashifal").innerHTML = htmlData;
+  });
+});
+
+const changeRashifalSelector = (item) => {
+  const rashifal = rashifalList.find((rashi) => {
+    return rashi.name == item.value;
+  });
+  document.getElementById("rashifal-desc").innerText = rashifal.rashifal;
+};
+
 
 const speak = (ele) => {
   const utterance = new SpeechSynthesisUtterance(ele.innerText);
