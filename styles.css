@@ -45,6 +45,7 @@ body {
 .opt-img {
   width: 80px;
   cursor: pointer;
+  animation: pulse 3s infinite alternate;
 }
 
 .container {
@@ -536,11 +537,10 @@ h3 {
   color: #000;
 }
 
-.active{
+.active {
   color: #4caf50;
   transform: scale(1.05) rotate(0.5deg);
 }
-
 
 .nav-item:hover {
   transform: scale(1.05) rotate(0.5deg);
@@ -557,7 +557,6 @@ h3 {
   font-weight: bold;
 }
 
-
 .rashifal-converter {
   flex-direction: column;
   align-items: center;
@@ -570,4 +569,27 @@ h3 {
   font-size: large;
   border: 1px solid #ccc;
   width: 100%;
+}
+
+#horoscope, #nav-share {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
